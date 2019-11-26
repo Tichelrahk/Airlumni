@@ -5,4 +5,5 @@ json.extract! @service, :id,
                         :availability_weeknight,
                         :availability_weekday,
                         :availability_weekend_day,
-                        :availability_weekend_night
+                        :availability_weekend_night,
+                        :user
