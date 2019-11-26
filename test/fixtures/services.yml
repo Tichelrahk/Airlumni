@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  price: 1
+  user: one
+  availability_weekday: false
+  availability_weeknight: false
+  availability_weekend_day: false
+  availability_weekend_night: false
+
+two:
+  name: MyString
+  description: MyString
+  price: 1
+  user: two
+  availability_weekday: false
+  availability_weeknight: false
+  availability_weekend_day: false
+  availability_weekend_night: false
