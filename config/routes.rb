@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # [...]
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      post '/login', to: 'login#login'
       resources :services, only: [:index]
     end
   end
