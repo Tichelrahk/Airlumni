@@ -7,6 +7,7 @@ class Api::V1::BookingsController < Api::V1::BaseController
     @booking.service = @service
     @booking.user = @booker
     if @booking.save
+      render :show
     else
       render_error
     end

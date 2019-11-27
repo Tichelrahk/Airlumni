@@ -22,4 +22,9 @@ class Api::V1::UsersController < Api::V1::BaseController
       userId: @user.id, text: 'finally solved'
     }
   end
+
+  def show
+    @user = User.find(params[:id])
+    @service = @user.service
+  end
 end
