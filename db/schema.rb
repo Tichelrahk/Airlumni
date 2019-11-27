@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_045739) do
+ActiveRecord::Schema.define(version: 2019_11_27_024634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_045739) do
     t.text "description"
     t.string "open_id"
     t.string "profile_picture"
-    t.float "lattitude"
+    t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
