@@ -1,4 +1,4 @@
-class Api::V1::LoginController < Api::V1::BaseController
+class Api::V1::UsersController < Api::V1::BaseController
   URL = "https://api.weixin.qq.com/sns/jscode2session".freeze
   skip_before_action :verify_authenticity_token
 
