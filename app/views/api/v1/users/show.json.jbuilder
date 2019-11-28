@@ -29,7 +29,7 @@
 # end
 
 
-json.extract! @user, :id, :name, :description, :bookings
+json.extract! @user, :id, :name, :location, :profile_picture, :description, :bookings
 if @service
   json.service do
     json.id @service.id
