@@ -35,7 +35,11 @@ if @service
     json.id @service.id
     json.description @service.description
     json.name @service.name
-    json.bookings @service.bookings
+    json.bookings @service.bookings do |booking|
+      json.booking = booking
+      json.user = booking.user
+      json.service = booking.service
+    end
   end
 end
 
