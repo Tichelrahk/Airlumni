@@ -30,12 +30,13 @@
 
 
 json.extract! @user, :id, :name, :description, :bookings
-
-json.service do
-  json.id @service.id
-  json.description @service.description
-  json.name @service.name
-  json.bookings @service.bookings
+if @service
+  json.service do
+    json.id @service.id
+    json.description @service.description
+    json.name @service.name
+    json.bookings @service.bookings
+  end
 end
 
 
