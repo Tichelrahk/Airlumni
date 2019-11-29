@@ -25,8 +25,8 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def show
     @user = User.find(params[:id])
-    @service = @user.service if user.service
-    @bookings = @user.bookings if user.bookings
+    @service = @user.service if @user.service
+    @bookings = @user.bookings if @user.bookings
     # debugger
   end
 
