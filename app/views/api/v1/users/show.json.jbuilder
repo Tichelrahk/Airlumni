@@ -38,9 +38,9 @@ json.user do
   json.location @user.location
   json.profile_picture @user.profile_picture
   json.bookings @bookings do |booking|
-    json.booking = booking
-    json.service = booking.service
-    json.user = booking.service.user
+    json.booking booking
+    json.service booking.service
+    json.user booking.service.user
   end
 end
 
@@ -50,9 +50,9 @@ if @service
     json.description @service.description
     json.name @service.name
     json.bookings @service.bookings do |booking|
-      json.booking = booking
-      json.user = booking.user
-      json.service = booking.service
+      json.booking booking
+      json.user booking.user
+      json.service booking.service
     end
   end
 end
