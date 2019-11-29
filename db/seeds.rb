@@ -32,7 +32,7 @@ pparray = [
   ["Agnes Selvita","https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/f0dvmknmklphpqo3ckp6.jpg","This is my cup of tea. I help my friends understand difficult problems, and sometime inspire them to study algorithms"]
 ]
 
-programming_language = rand("CSS HTML", "JavaScript", "Ruby on Rails","Ruby")
+programming_language = ["CSS HTML", "JavaScript", "Ruby on Rails","Ruby"].sample
 
 pparray.each do |array|
   u = User.create!(name: array[0],
