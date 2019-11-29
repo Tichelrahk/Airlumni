@@ -28,13 +28,16 @@ pparray = [
   ["Frank (朱庆丰) Zhu","https://media.licdn.cn/dms/image/C5103AQFVJCaMrxT6og/profile-displayphoto-shrink_800_800/0?e=1580342400&v=beta&t=Id-a_nst4wg41zV2n6ZloPXI-ygoVPhroev9ihde1Ws","I have studies Computer architecture at an intermediate and advanced level at my university. I have also done an internship"],
   ["Dan Li","https://avatars2.githubusercontent.com/u/35441384?v=4","I hold a Computer and Electronic Engineering B.sc and M.sc from the Islamic Azad University in Iran. I have completed my PhD"],
   ["Pavel Liser","https://media.licdn.cn/dms/image/C5603AQHCSlbdlrAQBw/profile-displayphoto-shrink_800_800/0?e=1580342400&v=beta&t=TQJLkyNmAdg1D6XKAYB7h_WbKoF4j5uMViCGMIzx-S4","I'm an expert on python and C++. I'm also good with discrete math and CS theory (NFAs, regexes, Turing Machines"],
-  ["Adam Kalimi","https://avatars3.githubusercontent.com/u/26082320?v=4","C,C++ ,Java  Programming are my core subjects in Computer Science"],
+  ["Adam Kalimi","https://media.licdn.com/dms/image/C5103AQESizJPtAhTJQ/profile-displayphoto-shrink_800_800/0?e=1580342400&v=beta&t=dHdHknnVSsen69rwfNGE5UhPnTUmgjAYTVfD1ezuOKg","C,C++ ,Java  Programming are my core subjects in Computer Science"],
   ["Agnes Selvita","https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/f0dvmknmklphpqo3ckp6.jpg","This is my cup of tea. I help my friends understand difficult problems, and sometime inspire them to study algorithms"]
 ]
+
+programming_language = rand("CSS HTML", "JavaScript", "Ruby on Rails","Ruby")
+
 pparray.each do |array|
   u = User.create!(name: array[0],
                    profile_picture: array[1])
-  s = Service.new(name: Faker::ProgrammingLanguage.name, description: array[2], price: rand(200..300))
+  s = Service.new(name: programming_language, description: array[2], price: rand(200..300))
   s.user = u
   s.save!
 end
