@@ -6,6 +6,7 @@ class Api::V1::ServicesController < Api::V1::BaseController
       # @services = Service.where(sql_query, query: "%#{params[:query]}%")
     else
       @services = Service.all
+    end
   end
 
   def show
