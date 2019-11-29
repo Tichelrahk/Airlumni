@@ -28,8 +28,22 @@
 #     json.description @service.description
 # end
 
+#CHANGE THIS
+# json.extract! @user, :id, :name, :location, :profile_picture, :description, :bookings
 
-json.extract! @user, :id, :name, :location, :profile_picture, :description, :bookings
+json.user do
+  json.id @user.id
+  json.description @user.description
+  json.name @user.name
+  json.location @user.location
+  json.profile_picture @user.profile_picture
+  json.bookings @bookings do |booking|
+    json.booking = booking
+    json.service = booking.service
+    json.user = booking.service.user
+  end
+end
+
 if @service
   json.service do
     json.id @service.id
