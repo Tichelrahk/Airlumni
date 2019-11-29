@@ -2,8 +2,8 @@ class Api::V1::ServicesController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :destroy]
   def index
     if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query"
-      @services = Service.where(sql_query, query: "%#{params[:query]}%")
+      # sql_query = "name ILIKE :query OR description ILIKE :query"
+      # @services = Service.where(sql_query, query: "%#{params[:query]}%")
     else
       @services = Service.all
   end
